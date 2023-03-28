@@ -1,3 +1,5 @@
+#include "my_lib.h"
+
 int my_memcmp(void *s1, void *s2, size_t n)
 {
     unsigned char *p = s1;
@@ -11,6 +13,7 @@ int my_memcmp(void *s1, void *s2, size_t n)
         }
         n--;
         p++;
+        d++;
     }
     return 0;
 }
