@@ -8,17 +8,19 @@ void my_bzero(char *s, size_t n)
 
     while (i < n)
     {
-        *(p + i) = '\0'; //0x0f0de0
-        // p[i] = '\0'; //l
+        *(p + i) = '\0';  //0x0f0de0
+      //p[i] = '\0';      //l
         i++;
     }
 }
 
-/* int main(void)
+/* 
+int main(void)
 {
     char str[6] = "lacto";
     printf("%s\n", str);
     my_bzero(str, 3);
     write (1, str, 5);
     write (1, "\n", 1);
-} */
+} 
+*/

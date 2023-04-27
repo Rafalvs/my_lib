@@ -22,7 +22,7 @@ int my_strcmp(const char *s1, const char *s2);
 char *my_strcpy(char *dest, const char *src, size_t n);
 char *strdup(const char *s);
 size_t my_strlen(const char *s);
-char *my_strchr(const char *s, int c);
+char *strstr(const char *haystack, const char *needle);
 int *my_tolower(char *c, size_t n);
 int *my_toupper(char *c, size_t n);
 

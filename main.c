@@ -1,16 +1,22 @@
-#include "my_memcmp.c"
+#include "my_lib.h"
+#include "my_strdup.c"
 #include <stdio.h>
 
 int main(void)
 {
-    char lacto[10] = "pai";
-    char bacilo[10] = "filho1984";
+    char org[12] = "morango";
+    char *dup;
+    int len1;
+    int len2;
 
-    int result;
-    result = my_memcmp(lacto, bacilo, 4);
+    dup = my_strdup(org);
+    len1 = my_strlen(org);
+    len2 = my_strlen(dup);
 
-    if (result == 0)
-        printf("resultado nu\n");
-    else
-        printf("%d\n", result);
+    printf("String Original: '%s' (%d)\n",
+            org,len1);
+    printf("String Duplicada: '%s' (%d)\n",
+            dup,len2);
+
+    return(0);
 }

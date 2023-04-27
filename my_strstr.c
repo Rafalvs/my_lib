@@ -1,17 +1,37 @@
-char *my_strchr(const char *s, int c)
+char *my_strstr(const char *haystack, const char *needle)
 {
-    
-    int i;
-    i = 0;
+    size_t i;
+    size_t j;
 
-    while (i != '\0')
+    i = 0;
+    j = 0;
+    if (*needle == '\0')
+    return ((char *)haystack);
+    
+    while (haystack[i] != '\0')
     {
-        if (*s[i] == c)
+        while (haystack[i] == needle[j])
         {
-        return s;
+            i++;
+            j++;
+            if (needle[j] == '\0')
+                return ((char *)&haystack[i - j]);
         }
-        if (!*s)
-        return NULL;
+        i = i - j + 1;
+        j = 0;
     }
-    return NULL;
+    return (NULL);
 }
+
+/*
+int main (void)
+{
+    char acdc[20] = "highway to hell";
+    char *result;
+
+    result = my_strstr(acdc, "to");
+    printf("%s\n", result);
+    (void) result;
+    return 0;
+}
+*/

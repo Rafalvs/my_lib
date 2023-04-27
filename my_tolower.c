@@ -17,4 +17,3 @@ int *my_tolower(char *c, size_t n)
         i++;
     }
 }
- 

@@ -17,3 +17,18 @@ int my_memcmp(void *s1, void *s2, size_t n)
     }
     return 0;
 }
+
+/* 
+int main (void)
+{
+   char str1[15] = "stinger";
+   char str2[15] = "vandal";
+   int ret;
+
+   ret = my_memcmp(str1, str2, 5);
+
+   printf("%d", ret);
+   
+   return(0);
+}
+*/

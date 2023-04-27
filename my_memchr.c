@@ -1,4 +1,4 @@
-#include "my_lib.h"
+// #include "my_lib.h"
 
 void *my_memchr(const void *s, int c, size_t n)
 {
